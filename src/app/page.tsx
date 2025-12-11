@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -47,10 +48,12 @@ export default function Home(){
                 transition={{ duration: 0.6 }}
                 className="flex justify-center"
                 >
-                    <img
-                    src="\profile.jpeg"
+                     <Image
+                    src="/profile.jpeg"
                     alt="Profile"
-                    className="w-64 h-64 object-cover rounded-2xl shadow-lg border border-gray-300 dark:border-gray-700"
+                    width={256}
+                    height={256}
+                    className="object-cover rounded-2xl shadow-lg border border-gray-300 dark:border-gray-700"
                     />
                 </motion.div>
             </div>
