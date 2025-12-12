@@ -47,9 +47,10 @@ export default function Contact(){
                                 I&apos;m always open to discussing new ideas, creative projects, or opportunities to contribute my expertise.
                             </p>
                             <div className="mt-6 space-y-3">
-                                <p><strong>Email:</strong> <a href="mailto:akesh@example.com" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">akesh@example.com</a></p>
-                                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">linkedin.com/in/akesh</a></p>
-                                <p><strong>GitHub:</strong> <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">github.com/akesh</a></p>
+                                <p><strong>Email:</strong> <a href="mailto:patikiri.ai@gmail.com" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">patikiri.ai@gmail.com</a></p>
+                                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/akesh-indudunu-9a9b12254/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">linkedin.com/in/akesh-indudunu</a></p>
+                                <p><strong>GitHub:</strong> <a href="https://github.com/akeshindudunu" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">github.com/akeshindudunu</a></p>
+                                <p><strong>Phone:</strong> <a target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">+94716306892</a></p>
                             </div>
                             <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition mt-6 inline-block">
                               <Button className="rounded-xl px-6 py-2 text-lg">Back Home</Button>
