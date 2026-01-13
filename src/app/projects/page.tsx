@@ -31,7 +31,7 @@ const projects: Project[] = [
     techStack: ['Next.js', 'Node.js', 'MySQL'],
   },
    {
-    id: 2,
+    id: 3,
     title: 'Course Registration System',
     shortDescription: 'Web-based course enrollment and management system.',
     description:
@@ -39,7 +39,7 @@ const projects: Project[] = [
     techStack: ['Next.js', 'Node.js', 'MySQL'],
   },
    {
-    id: 2,
+    id: 4,
     title: 'Course Registration System',
     shortDescription: 'Web-based course enrollment and management system.',
     description:
@@ -47,7 +47,7 @@ const projects: Project[] = [
     techStack: ['Next.js', 'Node.js', 'MySQL'],
   },
    {
-    id: 2,
+    id: 5,
     title: 'Course Registration System',
     shortDescription: 'Web-based course enrollment and management system.',
     description:
