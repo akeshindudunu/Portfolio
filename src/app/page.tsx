@@ -23,10 +23,7 @@ export default function Home(){
                         </CardHeader>
                         <CardContent className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                             <p>
-                                I'm an experienced Full Stack Developer with a strong background in
-                                building scalable, high‑performance applications. I specialize in
-                                creating seamless digital experiences using modern technologies such as
-                                React, Next.js, NestJS, Node.js, and MySQL.
+                                I am a passionate undergraduate with a strong interest in Data Analytics, Artificial Intelligence, and Machine Learning. I have hands-on experience working with data-driven applications, along with a solid background in web development using Next.js, UI/UX design with Figma, and version control using Git and GitHub. I enjoy transforming data into meaningful insights and continuously seek to expand my analytical and technical skills.
                             </p>
                             <p className="mt-4">
                                 As a developer, I focus on clean architecture, efficient solutions, and
