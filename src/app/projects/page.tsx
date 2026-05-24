@@ -24,35 +24,11 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Course Registration System',
-    shortDescription: 'Web-based course enrollment and management system.',
+    title: 'Ecomate V1.0',
+    shortDescription: 'A handheld, Arduino-based IoT vehicle emission tester. It monitors CO, and HC levels. Data is processed and transmitted to a mobile app built with Expo for real-time tracking. Ecomate provides a portable solution for emission testing, promoting cleaner and safer environments and securing vehicle health.',
     description:
-      'A system that allows students to browse courses, register online, and receive confirmations. Staff members can manage courses, schedules, and student data securely.',
-    techStack: ['Next.js', 'Node.js', 'MySQL'],
-  },
-   {
-    id: 3,
-    title: 'Course Registration System',
-    shortDescription: 'Web-based course enrollment and management system.',
-    description:
-      'A system that allows students to browse courses, register online, and receive confirmations. Staff members can manage courses, schedules, and student data securely.',
-    techStack: ['Next.js', 'Node.js', 'MySQL'],
-  },
-   {
-    id: 4,
-    title: 'Course Registration System',
-    shortDescription: 'Web-based course enrollment and management system.',
-    description:
-      'A system that allows students to browse courses, register online, and receive confirmations. Staff members can manage courses, schedules, and student data securely.',
-    techStack: ['Next.js', 'Node.js', 'MySQL'],
-  },
-   {
-    id: 5,
-    title: 'Course Registration System',
-    shortDescription: 'Web-based course enrollment and management system.',
-    description:
-      'A system that allows students to browse courses, register online, and receive confirmations. Staff members can manage courses, schedules, and student data securely.',
-    techStack: ['Next.js', 'Node.js', 'MySQL'],
+      'A handheld, Arduino-based IoT vehicle emission tester. It monitors CO, and HC levels. Data is processed and transmitted to a mobile app built with Expo for real-time tracking. Ecomate provides a portable solution for emission testing, promoting cleaner and safer environments and securing vehicle health.',
+    techStack: ['javascript','C++'],
   },
 ];
 

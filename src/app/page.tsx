@@ -23,13 +23,15 @@ export default function Home(){
                         </CardHeader>
                         <CardContent className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                             <p>
-                                I am a passionate undergraduate with a strong interest in Data Analytics, Artificial Intelligence, and Machine Learning. I have hands-on experience working with data-driven applications, along with a solid background in web development using Next.js, UI/UX design with Figma, and version control using Git and GitHub. I enjoy transforming data into meaningful insights and continuously seek to expand my analytical and technical skills.
+                                I am a passionate undergraduate with a strong interest in Data Analytics,
+                                Artificial Intelligence, and Machine Learning.
+                                have hands-on experience working with data-driven applications,
+                                along with a solid background in web development using
+                                Next.js, UI/UX design with Figma, and version control using Git and GitHub.
+                                I enjoy transforming data into meaningful insights and continuously seek to expand
+                                my analytical and technical skills.
                             </p>
-                            <p className="mt-4">
-                                As a developer, I focus on clean architecture, efficient solutions, and
-                                user‑centric design. I love solving complex problems and turning ideas
-                                into polished, production‑ready systems.
-                            </p>
+                            
                             <Link href="/projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition mt-6 inline-block">
                               <Button className="rounded-xl px-6 py-2 text-lg">View Projects</Button>
                             </Link>
