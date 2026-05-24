@@ -47,6 +47,33 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npx next build
 
+      - name: Prepare export directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Looking for Next export/output directories..."
+          if [ -d out ]; then
+            echo "out already exists"
+          elif [ -d .next/output/export ]; then
+            echo "Found .next/output/export — moving to out"
+            mv .next/output/export out
+          elif [ -d .next/export ]; then
+            echo "Found .next/export — moving to out"
+            mv .next/export out
+          elif [ -d .next/output/static ]; then
+            echo "Found .next/output/static — copying to out"
+            mkdir -p out
+            cp -r .next/output/static/* out/
+          elif [ -d .next/server/pages ]; then
+            echo "Found .next/server/pages — copying to out"
+            mkdir -p out
+            cp -r .next/server/pages/* out/ || true
+          else
+            echo "::error::No static export directory found. Listing .next for debugging:"
+            ls -la .next || true
+            exit 1
+          fi
+
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
