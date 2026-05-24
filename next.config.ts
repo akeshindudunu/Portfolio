@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   basePath: "/Portfolio",
+  assetPrefix: "/Portfolio",
   output: "export",  // <=== enables static exports
   reactStrictMode: true,
 };
