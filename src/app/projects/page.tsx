@@ -25,7 +25,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: 'Ecomate V1.0',
-    shortDescription: 'A handheld, Arduino-based IoT vehicle emission tester. It monitors CO, and HC levels. Data is processed and transmitted to a mobile app built with Expo for real-time tracking. Ecomate provides a portable solution for emission testing, promoting cleaner and safer environments and securing vehicle health.',
+    shortDescription: 'A handheld, Arduino-based IoT vehicle emission tester.',
     description:
       'A handheld, Arduino-based IoT vehicle emission tester. It monitors CO, and HC levels. Data is processed and transmitted to a mobile app built with Expo for real-time tracking. Ecomate provides a portable solution for emission testing, promoting cleaner and safer environments and securing vehicle health.',
     techStack: ['javascript','C++'],
