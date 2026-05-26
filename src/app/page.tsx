@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 
 export default function Home(){
     return(
-        <div className="min-h-screen w-full flex items-center justify-center p-8">
-            <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="h-full w-full flex items-center justify-center p-8">
+            <div className="overflow-hidden max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 {/* Text Section */}
                 <motion.div
                 initial={{ opacity: 0, x: -40 }}
