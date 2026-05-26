@@ -48,7 +48,7 @@ export default function Home(){
                 className="flex justify-center"
                 >
                      <Image
-                    src="/profile.jpeg"
+                    src="/Portfolio/profile.jpeg"
                     alt="Profile"
                     width={256}
                     height={256}
