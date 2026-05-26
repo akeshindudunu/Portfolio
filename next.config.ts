@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
- output: 'export', // Required for GitHub Pages static hosting
+  output: 'export', // Required for GitHub Pages static hosting
   basePath: '/Portfolio', // Required for GitHub Pages static hosting
   assetPrefix: '/Portfolio/',// Required for GitHub Pages static hosting
   images: {
