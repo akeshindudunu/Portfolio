@@ -46,9 +46,9 @@ export default function Contact(){
                             <p className="mt-4">
                                 I&apos;m always open to discussing new ideas, creative projects, or opportunities to contribute my expertise.
                             </p>
-                            
+                            {
                             // Here goes links to personal email, LinkedIn, GitHub, etc. You can replace the href values with your actual contact links.
-                            
+                            }
                             <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition mt-6 inline-block">
                               <Button className="rounded-xl px-6 py-2 text-lg">Back Home</Button>
                             </Link>
