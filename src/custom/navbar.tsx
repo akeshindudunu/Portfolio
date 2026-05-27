@@ -60,13 +60,13 @@ export default function Navbar(){
                 
                 {/* Desktop navigation */}
                 <div className="hidden md:flex items-center space-x-8">
-                    <Link href="/Portfolio/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition font-medium">
+                    <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition font-medium">
                         Home
                     </Link>
-                    <Link href="/Portfolio/projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition font-medium">
+                    <Link href="/projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition font-medium">
                         Projects
                     </Link>
-                    <Link href="/Portfolio/contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition font-medium">
+                    <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition font-medium">
                         Contact
                     </Link>
                     
