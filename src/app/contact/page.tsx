@@ -11,19 +11,42 @@ import { useState } from "react";
 export default function Contact(){
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // TODO: Send form data to backend API or email service
-        console.log('Form submitted:', formData);
-        setSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setSubmitted(false), 3000);
+        setIsSubmitting(true);
+        setErrorMessage('');
+        setSubmitted(false);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Something went wrong.');
+            }
+
+            setSubmitted(true);
+            setFormData({ name: '', email: '', message: '' }); // Clear fields on success
+        } catch (error: any) {
+            setErrorMessage(error.message || 'Failed to submit message.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return(
@@ -47,7 +70,8 @@ export default function Contact(){
                                 I&apos;m always open to discussing new ideas, creative projects, or opportunities to contribute my expertise.
                             </p>
                             {
-                            // Here goes links to personal email, LinkedIn, GitHub, etc. You can replace the href values with your actual contact links.
+                                /* Fixed JSX comment style to pass next build checks:
+                                   Here goes links to personal email, LinkedIn, GitHub, etc. You can replace the href values with your actual contact links. */
                             }
                             <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition mt-6 inline-block">
                               <Button className="rounded-xl px-6 py-2 text-lg">Back Home</Button>
@@ -69,9 +93,16 @@ export default function Contact(){
                         <CardContent>
                             {submitted && (
                                 <div className="mb-4 p-3 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 rounded-lg">
-                                    Thank you! Your message has been sent.
+                                    Thank you! Your message has been sent to the database.
                                 </div>
                             )}
+
+                            {errorMessage && (
+                                <div className="mb-4 p-3 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-200 rounded-lg">
+                                    {errorMessage}
+                                </div>
+                            )}
+
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 {/* Name */}
                                 <div>
@@ -85,6 +116,7 @@ export default function Contact(){
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
+                                        disabled={isSubmitting}
                                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
                                         placeholder="Your name"
                                     />
@@ -102,6 +134,7 @@ export default function Contact(){
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
+                                        disabled={isSubmitting}
                                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
                                         placeholder="your@email.com"
                                     />
@@ -118,6 +151,7 @@ export default function Contact(){
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
+                                        disabled={isSubmitting}
                                         rows={5}
                                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600"
                                         placeholder="Your message..."
@@ -125,8 +159,8 @@ export default function Contact(){
                                 </div>
 
                                 {/* Submit Button */}
-                                <Button type="submit" className="w-full rounded-xl px-6 py-2 text-lg mt-2">
-                                    Send Message
+                                <Button type="submit" disabled={isSubmitting} className="w-full rounded-xl px-6 py-2 text-lg mt-2">
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
                                 </Button>
                             </form>
                         </CardContent>
