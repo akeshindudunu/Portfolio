@@ -29,6 +29,15 @@ const projects: Project[] = [
     description:
       'A handheld, Arduino-based IoT vehicle emission tester. It monitors CO, and HC levels. Data is processed and transmitted to a mobile app built with Expo for real-time tracking. Ecomate provides a portable solution for emission testing, promoting cleaner and safer environments and securing vehicle health.',
     techStack: ['javascript','C++'],
+  },
+  {
+    id: 3,
+    title: 'Customer Churn Analysis (Telco)',
+    shortDescription: 'Conducted end-to-end exploratory data analysis and SQL reporting to identify key churn drivers and pinpoint high-risk customer segments.',
+    description: `Analysis & Insights: Explored a dataset of 7,043 customers using Python to identify why users were leaving; used data visualizations to pinpoint the top drivers of churn, specifically focusing on short tenure, contract types, and high monthly bills.
+      Database & Querying: Moved the cleaned data into SQLite to create a local database, writing SQL queries to pull demographic trends and analyze customer billing habits.
+      Reporting & Next Steps: Built a clear visual narrative directly inside a Jupyter Notebook to share insights and recommendations with stakeholders, outlining a roadmap to add predictive machine learning models in the next phase.`,
+    techStack: ['Jupyter Notebook', 'Python', 'SQLite'],
   }
 ];
 
