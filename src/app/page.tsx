@@ -35,6 +35,9 @@ export default function Home(){
                             <Link href="/projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition mt-6 inline-block">
                               <Button className="rounded-xl px-6 py-2 text-lg">View Projects</Button>
                             </Link>
+                            <Link href="/Resume_Akesh.pdf" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition mt-6 inline-block ml-4">
+                                <Button className="rounded-xl px-6 py-2 text-lg">Download Resume</Button>
+                            </Link>
                         </CardContent>
                     </Card>
                 </motion.div>
